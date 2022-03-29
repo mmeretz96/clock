@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uhrzeit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container"> <p id="time"></p> </div>
+
+
+  <script>
+    function currentTime() {
+      let date = new Date()
+      let h = date.getHours()
+      let m = date.getMinutes()
+
+      h = (h < 10) ? "0" + h : h
+      m = (m < 10) ? "0" + m : m
+
+      let time = h + ":" + m
+
+      document.getElementById("time").innerText = time; 
+      let t = setTimeout(function(){ currentTime() }, 1000);
+    }
+    currentTime()
+  </script>
+</body>
+</html>

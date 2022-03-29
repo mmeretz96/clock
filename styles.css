@@ -1,0 +1,10 @@
+.container{
+  font-size: 30vw;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#time{
+  margin: 0;
+}
